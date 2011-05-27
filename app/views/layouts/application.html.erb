@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rubythekid</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :ckeditor %>
+  <%= javascript_include_tag "jquery", "rails","application" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<div id="banner">
+  <div id="banner_in" class="center">
+    <div id="logo">Ruby The Kid</div>
+    <div id="slogan">Thank god! I never ask for more</div>
+  </div>
+</div>
+  <div id="flash_top"><div id="flash_top_in" class="center"><marquee>this is text</marquee></div></div>
+<div id="main_out" class="center">
+  <div id="main_in">
+    <div id="left_content">
+      <div id="left">
+        <div id="menus"><%= render "menus/index" %></div>
+        <div id="lated_news_list"><%= render "lasted_news/index" %></div>
+      </div>
+      <div id="content"><p id="notice"><%= notice %></p><%= yield %></div>
+    </div>
+    <div id="right">
+    
+      <div id="user_form">
+        <% if current_user %>
+        <%= link_to "Edit Profile", edit_user_path(current_user.id)%>
+        <%= link_to "Logout", :logout%>
+        <% else %>
+
+        <%= link_to "Register", new_user_path%> | 
+        <%= link_to "Login", :login %>
+        <% end %>
+      </div>
+     
+    </div>
+    <div id="bottom">Powered by RubyTheKid</div>
+  </div>
+</div>
+</body>
+</html>

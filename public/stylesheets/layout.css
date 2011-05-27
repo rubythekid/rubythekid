@@ -1,0 +1,161 @@
+body{
+  margin: 0px;
+  background-color: #e08686; 
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+.center{
+  margin: 0 auto 0 auto;
+}
+div#banner{
+  height: 70px;
+  background-image: url("/images/banner_bg.png");
+  position:relative;
+}
+div#banner_in{
+  width: 1100px;
+  background-image: url("/images/banner_bg.png");
+}
+div#banner #logo{
+  color: #35020a;
+  font-size: 36px;
+  padding: 30px 0px 0 0px;
+  margin-top:0px;
+
+}
+div#banner #slogan{
+  color: #fbeb9e;
+  margin: 0px 100px;
+  font-size: 14px;
+}
+#flash_top{
+  background-color: #35020a;
+  height:20px;
+  padding-top: 2px;
+}
+#flash_top_in{
+  width: 1100px;
+  color: #eae8c5;
+}
+#main_out{
+  width: 1100px;
+}
+#main_in{ 
+  background-image: url("/images/content_bg.png");
+  float:left;
+  background-color: #35020a;
+}
+#left_content{
+  float:left;
+}
+div#left{
+  width: 200px;
+  float: left;
+}
+
+div#content{
+  background-color: #ddd;
+  width: 690px;
+  margin-top:3px;
+  float: left;
+}
+div.content_padding{
+  padding: 10px 0px 20px 5px;
+}
+.page_title{
+  margin: 10px 0px 10px 10px;
+  font-size: 26px;
+  color: #35020a;
+}
+#article_path{
+  font-size: 16px;
+  font-weight: bold;
+  color: #35020a;
+  width: 680px;
+  padding: 10px 0 0 0px;
+}
+#article_control{
+  width: 680px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+#author{
+  color: #777;
+  float:left;
+  width: 680px;
+}
+#date_time{
+  color: #777;
+  float:left;
+  width: 600px;
+}
+#edit_article{
+  color: #eae8c5;
+  float: left;
+  text-align: right;
+  width: 70px;
+  padding-right: 10px;
+}
+#article_content{
+  float:left;
+  width: 665px;
+  padding: 10px 0px 10px 5px;
+  margin: 10px 10px 20px 10px;
+  font-size: 14px;
+  background-color: #eee;
+}
+#article_content p{
+  padding-bottom: 18px;
+}
+#article_bottom{
+ float:left;
+}
+#article_parent{
+  width:690px;
+  margin: 0px 0 10px 10px;
+  float:left;
+}
+#select_section{
+  width:300px;
+  float:left;
+}
+#select_category{
+  width:290px;
+  float:left;
+}
+#new_title{
+  margin: 0px 10px;
+}
+.publish{
+  width:100px;
+  float:left;
+}
+.new_article{
+  width:680px;
+  float:left;
+  margin: 5px 0 0 0px;
+}
+#submit_area{
+  width:680px;
+  text-align: right;
+}
+.bottom_path{
+  margin: 20px 10px;
+}
+div#right{
+  width: 200px;
+  float: left;
+}
+#right #user_form{
+  width:200px;
+  padding: 0 10px;
+}
+div#bottom{
+  width: 1100px;
+  color: #c2f38d;
+  border-top: 1px solid #c2f38d;
+  float: left;
+  margin-top: 2px;
+}

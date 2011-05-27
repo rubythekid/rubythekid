@@ -1,0 +1,38 @@
+<%= form_for(@article) do |f| %>
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.hidden_field :user_id,:value=> current_user.id %>
+  <div id="article_parent">
+    <div id="select_section">
+      <%= label_tag "section" %>
+      <%= select_tag "section", options_from_collection_for_select(Section.all,:id,:name,@article.category.section_id) %>
+    </div>
+    <div id="select_category">
+      Category:<%= f.select :category_id, @categories.map{|cat|[cat.name,cat.id]},:selected => @article.category_id %>
+    </div>
+    <div class="publish">
+      <%= f.check_box :publish %><%= f.label :publish %><br/>
+      <%= f.check_box :font_page %><%= f.label :font_page %>
+    </div>
+    
+  </div>
+  <div class="new_article" id="new_title">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="new_article">
+    <pre><%= f.cktext_area :content,:toolbar=>'Full',:width=>"665",:height=>"500"%></pre>
+  </div>
+  <div class="new_article" id="submit_area">
+    <%= f.submit %>
+  </div>
+<% end %>

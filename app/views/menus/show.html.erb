@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%= @menu.name %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @menu.type %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @menu.link %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @menu.image %>
+</p>
+
+
+<%= link_to 'Edit', edit_menu_path(@menu) %> |
+<%= link_to 'Back', menus_path %>

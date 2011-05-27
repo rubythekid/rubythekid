@@ -1,0 +1,15 @@
+<div id="article_path">
+     <%= @article.category.section.name %> >>
+     <%= @article.category.name %> >>
+     <%= @article.title %>
+</div>
+<div id="article_control">
+  <div id="author"> Written by : <%= @article.user.username %></div>
+  <div id="edit_article"><%= link_to 'Edit', edit_article_path(@article) %></div>
+</div>
+<hr/>
+<div id="article_content">
+  <%= @article.content.html_safe %>
+</div>
+<hr/>
+<div id="article_bottom"><%= link_to 'Back', articles_path %></div>

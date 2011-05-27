@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<h1>Listing articles</h1>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>User</th>
+    <th>Title</th>
+    <th>Publish</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @articles.each do |article| %>
+  <tr>
+    <td><%= article.category.name %></td>
+    <td><%= article.user.username %></td>
+    <td><%= article.title %></td>
+    <td><%= article.publish %></td>
+    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    <td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete,:remote =>true,:class=>"delete_post" %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Article', new_article_path %>

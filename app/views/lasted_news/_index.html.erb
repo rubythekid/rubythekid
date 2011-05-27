@@ -1,0 +1,7 @@
+<% if lasted_news%>
+  <ul>
+    <% lasted_news.each do |article| %>
+      <li><%= link_to article.title, article %></li>
+    <% end %>
+  </ul>
+<% end %>

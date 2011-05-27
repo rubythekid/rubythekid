@@ -1,0 +1,18 @@
+<div class="page_title">Administrator</div>
+
+<div class="admin_menu">
+  <div class="admin_menu_item"><%=link_to "user manager",:controller => "users"%></div>
+  <div class="admin_menu_item"><%=link_to "menu manager",:controller => "menus"%></div>
+  <div class="admin_menu_item">
+    <div id="content_manager"><%=link_to "content manager","#"%></div>
+    <div class="admin_menu_subitem"><%=link_to "section manager",:controller =>"sections"%></div>
+    <div class="admin_menu_subitem"><%=link_to "category manager",:controller =>"categories"%></div>
+    <div class="admin_menu_subitem"><%=link_to "article manager",:controller =>"articles"%></div>
+  </div>
+</div>
+<div class="content_padding">
+  <div id="admin_content">
+    <%= yield %>
+  </div>
+</div>
+

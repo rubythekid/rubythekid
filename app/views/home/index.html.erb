@@ -1,0 +1,28 @@
+<div class="page_title">Home</div>
+<%unless @font_page.nil?%>
+<% @font_page.each do |article| %>
+<div id="article_control">
+  <div id="article_path">
+     <%= article.category.section.name %> >>
+     <%= article.category.name %> >>
+     <%= article.title %>
+  </div>
+  <div id="author">
+    Written by : <%= article.user.username %>
+  </div>
+  <div id="date_time">
+    Create at : <%= article.created_at %> Update at : <%= article.created_at %>
+  </div>
+  <div id="edit_article">
+    &nbsp;
+    <%unless current_user.nil?%>
+      <%= link_to 'Edit', edit_article_path(article) %>
+    <%end%>
+  </div>
+</div>
+<hr/>
+<div id="article_content">
+  <%= article.content.html_safe %>
+</div>
+<%end%>
+<%end%>
